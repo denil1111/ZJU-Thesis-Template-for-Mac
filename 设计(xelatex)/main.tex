@@ -1,0 +1,88 @@
+\documentclass[twoside,numberorder]{csbachelor}
+%==============================================================
+%==============================================================
+
+\usepackage{url}
+\usepackage{subfigure}
+
+%一些全局工具的定义
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+%==============================================================
+%==============================================================
+\begin{document}
+%==============================================================
+%==============================================================
+
+  %论文题目：{中文}{英文}
+  \zjutitle{}%
+           {}
+  %作者：{中文姓名}{英文}{学号}
+  \zjuauthor{}{}{}
+  %指导教师：{导师中文名}{导师英文名}
+  \zjumentor{}{}
+  %个人信息：{年级}{专业名称}
+  \zjuinfo{}{}
+  %学院信息：{学院中文}{学院英文}
+  \zjucollege{}{}
+  %日期：{Submitted Date}
+  \zjudate{}
+
+%==============================================================
+
+  %封面
+  \input{data/cover}
+  %诚信承诺书
+  \input{data/announce}
+
+  \frontmatter
+  \pagenumbering{Roman}
+
+  %中文摘要
+  \include{data/absc}
+  %英文摘要
+  \include{data/abse}
+
+%==============================================================
+%这部分不需要自己修改。
+
+  %目次页
+  \tableofcontents
+  \chaptermark{目录}
+  \addcontentsline{toc}{chapter}{目录}
+
+  \mainmatter
+
+%==============================================================
+
+  \include{data/chap1}
+  \include{data/chap2}
+  \include{data/chap3}
+  \include{data/chap4}
+
+%==============================================================
+%这也是个不需要自己修改的部分。
+
+  \backmatter %结束章节自动编号
+
+  %参考文献
+  \addcontentsline{toc}{chapter}{参考文献} % 解决目录中没有相应的参考文献的条目问题
+  \chaptermark{参考文献}
+
+%==============================================================
+
+  \bibliography{data/zjubib}
+
+  %致谢
+  \include{data/thanks}
+  %附录
+  \include{data/appe}
+  %任务书
+  \include{data/task}
+  %考核
+  \include{data/eval}
+
+%==============================================================
+%==============================================================
+\end{document}
