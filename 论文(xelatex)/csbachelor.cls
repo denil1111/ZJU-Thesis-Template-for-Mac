@@ -13,7 +13,7 @@
 %% 1999/12/01 or later.
 %% 
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
-\ProvidesClass{cskeleton}
+\ProvidesClass{csbachelor}
     [2008/10/24 v0.1 ZJU Dissertation Class]
 
 \DeclareOption{authoryear}{\def\zjubibstyle{A}}
@@ -55,10 +55,10 @@
 \setsansfont{Arial}
 \setmonofont{Courier New}
 
-\RequirePackage[CJKtextspaces,CJKmathspaces,slantfont,boldfont]{xeCJK}
-\setCJKmainfont{SimSun}
-\setCJKsansfont{SimHei}
-\setCJKmonofont{SimSun}
+\RequirePackage[slantfont,boldfont]{xeCJK}
+\setCJKmainfont[BoldFont=STHeiti,ItalicFont=STKaiti]{STSong}
+\setCJKsansfont[BoldFont=STHeiti]{STXihei}
+\setCJKmonofont{STFangsong}
 \punctstyle{kaiming}
 
 
@@ -77,7 +77,7 @@
 
 \RequirePackage{longtable}
 \RequirePackage{booktabs}
-\RequirePackage{caption2}
+\RequirePackage{caption}
 \RequirePackage{multirow}
 \RequirePackage{dcolumn}
 \RequirePackage{colortbl}
@@ -111,11 +111,11 @@
 \DeclareRobustCommand{\xiaoliu}{\fontsize{6.5pt}{\baselineskip}\selectfont}
 \DeclareRobustCommand{\qihao}{\fontsize{5.5pt}{\baselineskip}\selectfont}
 \DeclareRobustCommand{\bahao}{\fontsize{5pt}{\baselineskip}\selectfont}
-\setCJKfamilyfont{FangSong}{FangSong}
-\setCJKfamilyfont{HeiTi}{SimHei}
+\setCJKfamilyfont{FangSong}{STFangSong}
+\setCJKfamilyfont{HeiTi}{STXihei}
 \setCJKfamilyfont{KaiShu}{AR PL KaitiM GB}
 \setCJKfamilyfont{LiShu}{LiSu}
-\setCJKfamilyfont{SongTi}{SimSun}
+\setCJKfamilyfont{SongTi}{STSong}
 \setCJKfamilyfont{YouYuan}{YouYuan}
 \setCJKfamilyfont{STFangsong}{STFangsong}
 \setCJKfamilyfont{STXingkai}{STXingkai}
@@ -179,8 +179,6 @@
 \makenomenclature
 \renewcommand{\figurename}{图} % 插图题头
 \renewcommand{\tablename}{表} % 插表题头
-\renewcommand{\captionlabeldelim}{} %% 定义如 "图(表)1: 示例" 中的间隔符号,如 ":" ,这里定义为空
-\renewcommand{\captionlabelsep}{\hspace{1em}} %定义图表编号与标题间的间隔距离
 \setlength{\belowcaptionskip}{2mm}
 \renewcommand{\footnotesize}{\xiaowu}
 \newtheoremstyle{zjutheorem}
