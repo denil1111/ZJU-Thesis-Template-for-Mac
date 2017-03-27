@@ -1,0 +1,36 @@
+%%============================================================
+%% 中文封面
+
+\thispagestyle{empty}
+
+\vspace{5mm}
+
+\begin{center}
+   \includegraphics[width=108mm]{images/zjdx}
+\end{center}
+
+\centerline{\songti\xiaoyi\textbf{本科生毕业论文}}
+\centerline{\songti\xiaoyi\textbf{开题报告}}
+\vspace{4mm}
+
+\begin{center}
+  \includegraphics[width=35mm]{images/standxb}
+\end{center}
+
+\vspace{32mm}
+
+\begin{tabbing}
+			   \hspace{25mm} \= \songti\sihao 题\hspace{10mm}目： \= \underline{\makebox[8cm]{\sihao\zjutitlec}} \\[2mm]
+               \> \songti\sihao 学生姓名： \= \underline{\makebox[8cm]{\sihao\zjuauthornamec}} \\[2mm]
+              \> \songti\sihao 学生学号： \> \underline{\makebox[8cm]{\sihao\zjuauthorid}} \\[2mm]
+              \> \songti\sihao 指导教师： \> \underline{\makebox[8cm]{\sihao\zjumentorc}} \\[2mm]
+              \> \songti\sihao 专\hspace{10mm}业： \> \underline{\makebox[8cm]{\sihao\zjugrade\hspace{3mm}\zjumajor}} \\[2mm]
+              \> \songti\sihao 学\hspace{10mm}院： \> \underline{\makebox[8cm]{\sihao\zjucollegec}}
+\end{tabbing}
+
+
+%%============================================================
+% empty page for two-page print
+\ifthenelse{\equal{\zjuside}{T}}{%
+  \newpage\mbox{}%
+  \thispagestyle{empty}}{}
